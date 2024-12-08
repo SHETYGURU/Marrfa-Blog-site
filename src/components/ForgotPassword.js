@@ -33,7 +33,6 @@ const ForgotPassword = () => {
 
   return (
     <div className="min-h-screen flex flex-col lg:flex-row justify-center items-center bg-white">
-      {/* Left Section with Video */}
       <div className="hidden lg:block lg:w-2/5">
         <video
           className="w-full h-full object-cover"
@@ -47,7 +46,6 @@ const ForgotPassword = () => {
         </video>
       </div>
 
-      {/* Right Section with Form */}
       <div className="w-full lg:w-2/3 p-8 flex items-center justify-center lg:pl-32 xl:pl-48">
         <div className="w-full max-w-sm" id="forgotPasswordCard">
           <h2 className="text-xl font-semibold text-gray-700 text-center mb-6">

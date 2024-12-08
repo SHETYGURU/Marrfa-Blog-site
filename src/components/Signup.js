@@ -85,7 +85,6 @@ const Signup = () => {
 
   return (
     <div className="min-h-screen flex flex-col lg:flex-row justify-center items-center bg-white">
-      {/* Left Section with Video - hidden on mobile */}
       <div className="hidden lg:block lg:w-2/5 relative">
         <h1 className="absolute top-5 left-5 text-xl font-bold text-white z-20">Marrfa</h1>
         <video 
@@ -100,7 +99,6 @@ const Signup = () => {
         </video>
       </div>
 
-      {/* Right Section with Form */}
       <div className="w-full lg:w-2/3 flex items-center justify-center lg:pl-32 xl:pl-48 p-6">
         <div className="w-full max-w-md p-8 bg-white">
           <div className="block lg:hidden mb-4 text-center">
@@ -111,7 +109,6 @@ const Signup = () => {
             Create an Account
           </h2>
 
-          {/* Google Sign up */}
           <div className="flex items-center justify-center mb-4">
             <button 
               className="flex items-center justify-center w-full py-2 px-3 text-xs font-medium text-gray-600 bg-white border border-gray-300 rounded-lg hover:bg-gray-100"
@@ -124,7 +121,6 @@ const Signup = () => {
 
           <div className="text-center text-xs text-gray-500 mb-3">or sign up with email</div>
 
-          {/* Signup Form */}
           <form className="space-y-4" onSubmit={handleSignup}>
             <div>
               <label className="block text-sm font-semibold text-gray-700">Username</label>
@@ -159,16 +155,13 @@ const Signup = () => {
               />
             </div>
 
-            {/* Display error message */}
             {error && <div className="text-red-500 text-sm">{error}</div>}
 
-            {/* Sign Up Button */}
             <button type="submit" className="w-full common-button text-white bg-black py-2 px-3 rounded-lg hover:bg-gray-800">
               Sign Up
             </button>
           </form>
 
-          {/* Sign in Section */}
           <p className="mt-4 text-center text-xs text-gray-600">
             Already have an account? <a href="/login" className="text-blue-500 hover:underline">Sign in</a>
           </p>

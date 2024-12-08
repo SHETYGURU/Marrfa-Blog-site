@@ -20,7 +20,6 @@ const SearchPage = () => {
     const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     const regex = new RegExp(`(${escapedQuery})`, caseSensitive ? "g" : "gi");
     if (excludeWords) {
-      // Exclude words filter: do not highlight matches
       return text;
     }
     return text.replace(regex, `<mark class="bg-gray-300">$1</mark>`);
@@ -65,7 +64,7 @@ const SearchPage = () => {
     } else if (sortByDate === "descending") {
       results.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
     } else {
-      results.sort(() => Math.random() - 0.5); // Random order for default
+      results.sort(() => Math.random() - 0.5); 
     }
 
     setFilteredBlogs(results);
@@ -171,7 +170,6 @@ const SearchPage = () => {
         </div>
       </div>
 
-      {/* Results */}
       <div className="w-full max-w-6xl bg-white rounded-md shadow p-4 mt-24 relative">
         <ul className="grid gap-4 sm:grid-cols-1 md:grid-cols-3">
           {filteredBlogs.map((blog, index) => (

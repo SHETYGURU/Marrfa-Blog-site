@@ -5,7 +5,6 @@ import { GoogleAuthProvider, getAuth, signInWithPopup, signInWithEmailAndPasswor
 import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 import firebaseConfig from "./connection_db"; 
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider();
 const auth = getAuth(app);
@@ -85,10 +84,8 @@ const Login = () => {
         </video>
       </div>
 
-      {/* Right Section with Form */}
       <div className="w-full lg:w-2/3 p-8 flex items-center justify-center lg:pl-32 xl:pl-48">
         <div className="w-full max-w-sm">
-          {/* Logo and Company Name for Mobile View */}
           <div className="block lg:hidden mb-4 text-center">
             <img src="/assets/logo.png" alt="Company Logo" className="mx-auto mb-2" style={{ width: '100px', height: '100px' }} />
             <h1 className="text-2xl font-bold">Marrfa</h1>
@@ -98,7 +95,6 @@ const Login = () => {
             Log in to Your Account
           </h2>
 
-          {/* Google Sign in */}
           <div className="flex items-center justify-center mb-6">
             <button
               className="flex items-center justify-center w-full max-w-xs py-2 px-3 text-xs font-medium text-gray-600 bg-white border border-gray-300 rounded-lg hover:bg-gray-100"
@@ -110,7 +106,6 @@ const Login = () => {
             </button>
           </div>
           <div className="text-center text-xs text-gray-500 mb-3">or login with email</div>
-          {/* Email/Password Login */}
           <form className="space-y-4" onSubmit={handleEmailLogin}>
             <div>
               <label className="block text-sm font-semibold text-gray-700">Email</label>
