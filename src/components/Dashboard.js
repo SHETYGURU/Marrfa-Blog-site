@@ -203,7 +203,7 @@ const SearchPage = () => {
                 }}
               ></p>
               <a
-                href="#"
+                href="/"
                 className="text-blue-500 text-sm mt-2 inline-block hover:underline"
               >
                 Read More
